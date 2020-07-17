@@ -1,0 +1,24 @@
+cd Directory
+
+git init
+
+git log
+
+git checkout 851539c7b8299231c4511bf001e88bd4ff1e2219
+
+git checkout -b Alex
+
+git cherry-pick 851539c7b8299231c4511bf001e88bd4ff1e2219
+
+904f8b8c96647d0d6bbe4a90ccccb010a6ef5575
+
+git add "filename"
+
+git commit
+
+Type summary above instructions in first line
+Then press Escape
+Then type :wq and press Enter
+
+git push
+

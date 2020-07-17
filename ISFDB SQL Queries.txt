@@ -1,0 +1,22 @@
+SELECT `publisher_id` FROM `publishers` WHERE `publisher_name` IN ('Ace Books', 'Ballantine Books', 'Berkley Books', 'Ace Science Fiction Specials') LIMIT 10000
+Ace Books = 37
+SELECT `pub_title` FROM `pubs` WHERE `publisher_id` IN (37) ORDER BY "pub_year"
+
+
+NEXT STEP WITH THIS QUERY - Make it a COUNT and Visualize frequency over time
+SELECT
+	`pubs`.`pub_title`,
+    `pubs`.`pub_year`,
+    `publishers`.`publisher_name`
+
+FROM
+	`pubs`
+
+LEFT JOIN
+	`publishers` ON `pubs`.`publisher_id` = `publishers`.`publisher_id`
+
+WHERE `pubs`.`publisher_id` = 37 AND
+	(EXTRACT(YEAR FROM `pubs`.`pub_year`) > 1950 AND
+     EXTRACT(YEAR FROM `pubs`.`pub_year`) < 1985)
+
+ORDER BY `pubs`.`pub_year`
