@@ -1,3 +1,5 @@
+#Vector Space Model Comparisons
+
 "word" "similarity to \"love\" + \"beauty\" + \"truth\""
 "1" "</s>" NA
 "2" "the" NA
